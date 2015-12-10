@@ -6,11 +6,11 @@ clues = list()
 
 for i in range(n):
     for j in range(m):
-        if  field[i][j] == '.':
-            if (i == 0 or field[i-1][j] == '#') and i < n-2 and field[i+1][j] == '.' and field[i+2][j] == '.':
-                clues.append([i+1,j+1])
-            elif (j == 0 or field[i][j-1] == '#') and j < m-2 and field[i][j+1] == '.' and field[i][j+2] == '.':
-                clues.append([i+1,j+1])
+        if field[i][j] == '.':
+            if (i == 0 or field[i - 1][j] == '#') and i < n - 2 and field[i + 1][j] == '.' and field[i + 2][j] == '.':
+                clues.append([i + 1, j + 1])
+            elif (j == 0 or field[i][j - 1] == '#') and j < m - 2 and field[i][j + 1] == '.' and field[i][j + 2] == '.':
+                clues.append([i + 1, j + 1])
 
 count = len(clues)
 print(count)
